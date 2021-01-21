@@ -14,7 +14,7 @@ This repo uses panda robot arm simulator and densefusion 6D pose estimation netw
 -    follow the steps
     1.  install libfranka ( [install from source](https://frankaemika.github.io/docs/installation_linux.html#building-from-source) recommended )
     2.  franka-ros [v0.6.0]( https://github.com/frankaemika/franka_ros/commit/49e5ac1055e332581b4520a1bd9ac8aaf4580fb1) ([install from source](https://frankaemika.github.io/docs/installation_linux.html#building-from-source) )
-        3.  clone repo
+    3.  clone repo
     ```sh
     cd <catkin_ws>/src
     git clone https://github.com/justagist/panda_simulator
