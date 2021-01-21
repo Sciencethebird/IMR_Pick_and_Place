@@ -21,19 +21,19 @@ git clone https://github.com/justagist/panda_simulator
 ```
 4.  run `./build_ws.sh` from <catkin_ws>/src/panda_simulator
 - Some problem you may encounted
-    1. catkin build problem 
+1. catkin build problem 
     
-        - this repo uses `catkin build` instead of `catkin_make` , you need to delete /build and /devel folder in your <catkin_ws> or simply `catkin clean` if you're originally using catkin_make to build the package.
-    2. franka-ros problem
+    - this repo uses `catkin build` instead of `catkin_make` , you need to delete /build and /devel folder in your <catkin_ws> or simply `catkin clean` if you're originally using catkin_make to build the package.
+2. franka-ros problem
 
-        - this repo uses franka-ros 0.6.0, check the version before moving on to further step, you may need to reinstall libfranka, follow [build from source](https://frankaemika.github.io/docs/installation_linux.html#building-the-ros-packages)
-        - in the install guide,  use `catkin build` instead of `catkin_make`
+    - this repo uses franka-ros 0.6.0, check the version before moving on to further step, you may need to reinstall libfranka, follow [build from source](https://frankaemika.github.io/docs/installation_linux.html#building-the-ros-packages)
+    - in the install guide,  use `catkin build` instead of `catkin_make`
         
-            ```sh
-            rosdep install --from-paths src --ignore-src --rosdistro kinetic -y --skip-keys libfranka
-            catkin build -DCMAKE_BUILD_TYPE=Release -DFranka_DIR:PATH=/path/to/libfranka/build
-            ```
-    3. libfranka problem
+        ```sh
+        rosdep install --from-paths src --ignore-src --rosdistro kinetic -y --skip-keys libfranka
+        catkin build -DCMAKE_BUILD_TYPE=Release -DFranka_DIR:PATH=/path/to/libfranka/build
+        ```
+3. libfranka problem
         - problem: apt-get installs a non-working version of libfranka
         - I use [libfranka 0.7.0](https://github.com/frankaemika/libfranka) build from source, make sure the /common folder is not empty before building libfranka
         
