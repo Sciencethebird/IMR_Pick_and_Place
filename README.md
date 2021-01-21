@@ -69,7 +69,6 @@ git clone https://github.com/justagist/panda_simulator -b kinetic-devel
     	```
     2. Start the object-robot interface
         ```sh
-        cd Robot_Control
     	python object_interface_server.py
     	```
     3. Attach the camera to the robot arm
