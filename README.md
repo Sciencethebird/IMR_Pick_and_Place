@@ -11,16 +11,16 @@ Pick and Place with 6D pose estimation network (DenseFusion) and Panda robot arm
 -    Gazebo 7.0
 ## Installation: Panda Robot Arm Simulator 
 -    Basically follow the installation guide on this [repo](https://github.com/justagist/panda_simulator/tree/kinetic-devel)
-### install panda simulator
+### Install panda simulator
 1.  install libfranka ( [install from source](https://frankaemika.github.io/docs/installation_linux.html#building-from-source) recommended )
 2.  franka-ros [v0.6.0]( https://github.com/frankaemika/franka_ros/commit/49e5ac1055e332581b4520a1bd9ac8aaf4580fb1) ( [install from source](https://frankaemika.github.io/docs/installation_linux.html#building-from-source) )
-3.  clone repo, make sure using the kinetic-devel branch 
+3.  clone this [repo](https://github.com/justagist/panda_simulator/tree/kinetic-devel), make sure using the kinetic-devel branch 
 ```sh
 cd <catkin_ws>/src
 git clone https://github.com/justagist/panda_simulator -b kinetic-devel
 ```
 4.  run `./build_ws.sh` from <catkin_ws>/src/panda_simulator
-### install python dependencies
+### Install python dependencies
 
 - panda_robot: add this [repo](https://github.com/justagist/panda_robot) to your <catkin_ws> and build it
 - quaternion
@@ -36,7 +36,10 @@ git clone https://github.com/justagist/panda_simulator -b kinetic-devel
     ```sh
     pip install scipy
     ```
-
+### ROS world and launch files
+- put IMR_PICK_AND_PLACE.launch under 
+`<catkin_ws>/src/panda_simulator/panda_gazebo/launch`
+- put IMR_PICK_AND_PLACE.world under your `$GAZEBO_RESOURCE_PATH`
 ### Some problem you may encounted
 1. catkin build problem 
     
@@ -64,7 +67,6 @@ git clone https://github.com/justagist/panda_simulator -b kinetic-devel
     	```sh
     	roslaunch panda_gazebo IMR_PICK_AND_PLACE.launch
     	```
-        
     2. Start the object-robot interface
         ```sh
         cd Robot_Control
