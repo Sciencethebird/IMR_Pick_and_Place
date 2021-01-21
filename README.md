@@ -36,20 +36,45 @@ git clone https://github.com/justagist/panda_simulator
 3. libfranka problem
         - problem: apt-get installs a non-working version of libfranka
         - I use [libfranka 0.7.0](https://github.com/frankaemika/libfranka) build from source, make sure the /common folder is not empty before building libfranka
-        
+
+
 ## Demo 1: Simple Pick and Place
 - demo goal: using franka robot arm to grab linemod-dataset-objects with kinect_ros camera attach to the gripper of franka robot arm
-    1. Start your gazebo with franka robot arm
+    1. install python libraries
+        - import [panda_robot](https://github.com/justagist/panda_robot)
+        - import quaternion
+        `pip install numpy-quaternion`
+        - import pyquaternion
+        `pip install pyquaternion
+        - install numba (optional)
+        	```sh
+        	python -m pip install llvmlite==0.31.0
+        	pip install numba
+        	```
+        - intall scipy (optional)
+            ```sh
+        	pip install scipy
+        	```
+    2. Start your gazebo with franka robot arm
     	```sh
     	roslaunch panda_gazebo panda_world.launch
     	```
         !!!! create a densefution PP world
         
-    2. Start the object and robot arm interface
+    3. Start the object and robot arm interface
+        - this is for attaching object to the robot arm
         - under /Robot_control    
         ```sh
     	python object_interface_server.py
     	```
+    4. attach the camera to the robot arm
+		```sh
+		python utils/attach_camera.py
+        ```
+    5. Run the demo
+        ```sh
+        python pick_and_place_example.py
+        ```
     
 ## Demo 2: DenseFusion + Pick and Place 
 ## Code Explain
