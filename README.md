@@ -41,7 +41,7 @@ git clone https://github.com/justagist/panda_simulator
 ## Demo 1: Simple Pick and Place
 - demo goal: using franka robot arm to grab linemod-dataset-objects with kinect_ros camera attach to the gripper of franka robot arm
     1. install python libraries
-        - import [panda_robot](https://github.com/justagist/panda_robot)
+        - import panda_robot: add this [repo](https://github.com/justagist/panda_robot) to your <catkin_ws>
         - import quaternion
         `pip install numpy-quaternion`
         - import pyquaternion
@@ -53,8 +53,8 @@ git clone https://github.com/justagist/panda_simulator
         	```
         - intall scipy (optional)
             ```sh
-        	pip install scipy
-        	```
+            pip install scipy
+            ```
     2. Start your gazebo with franka robot arm
     	```sh
     	roslaunch panda_gazebo panda_world.launch
