@@ -80,7 +80,7 @@ git clone https://github.com/justagist/panda_simulator
         ```   
     5. Run pick and place demo
         ```sh
-        python pick_and_place_example.py
+        python pick_and_place_demo.py
         ```
     
 ## Demo 2: DenseFusion + Pick and Place 
