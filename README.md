@@ -34,8 +34,8 @@ git clone https://github.com/justagist/panda_simulator
         catkin build -DCMAKE_BUILD_TYPE=Release -DFranka_DIR:PATH=/path/to/libfranka/build
         ```
 3. libfranka problem
-        - problem: apt-get installs a non-working version of libfranka
-        - I use [libfranka 0.7.0](https://github.com/frankaemika/libfranka) build from source, make sure the /common folder is not empty before building libfranka
+    - problem: apt-get installs a non-working version of libfranka
+    - I use [libfranka 0.7.0](https://github.com/frankaemika/libfranka) build from source, make sure the /common folder is not empty before building libfranka
 
 
 ## Demo 1: Simple Pick and Place
