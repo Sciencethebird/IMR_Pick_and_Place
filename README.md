@@ -20,7 +20,6 @@ This repo uses panda robot arm simulator and densefusion 6D pose estimation netw
         cd <catkin_ws>/src
         git clone https://github.com/justagist/panda_simulator
         ```
-        _
 4.  run `./build_ws.sh` from <catkin_ws>/src/panda_simulator
 - Some problem you may encounted
     1. catkin build problem 
