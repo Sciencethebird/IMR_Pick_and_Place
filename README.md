@@ -45,7 +45,7 @@ git clone https://github.com/justagist/panda_simulator
         - import quaternion
         `pip install numpy-quaternion`
         - import pyquaternion
-        `pip install pyquaternion
+        `pip install pyquaternion`
         - install numba (optional)
         	```sh
         	python -m pip install llvmlite==0.31.0
