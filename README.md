@@ -85,7 +85,8 @@ git clone https://github.com/justagist/panda_simulator -b kinetic-devel
         ```
     
 ## Demo 2: DenseFusion + Pick and Place 
-![](https://i.imgur.com/1IHjns1.gif)
+![](https://i.imgur.com/O0RjQBr.gif)
+
 
 ## Code Explain
 
