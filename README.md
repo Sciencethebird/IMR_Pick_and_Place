@@ -84,7 +84,7 @@ git clone https://github.com/justagist/panda_simulator -b kinetic-devel
         python pick_and_place_demo.py
         ```
     
-## Demo 2: DenseFusion + Pick and Place 
+## Demo 2:Pick and Place using 6D pose estimation
 ![](https://i.imgur.com/O0RjQBr.gif)
 
 
