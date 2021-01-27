@@ -1,0 +1,1 @@
+from move_gazebo_object import gazebo_object
