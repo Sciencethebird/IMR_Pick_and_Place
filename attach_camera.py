@@ -40,6 +40,7 @@ def combined_RT(rvec,tvec, inv = 0):
 
 if __name__ == '__main__':
 
+	# camera frame rotate to gripper frame
  	rr = np.array([[1, 0, 0], [0, -1, 0], [0, 0, -1]])
  	robot = PandaArm()
 
