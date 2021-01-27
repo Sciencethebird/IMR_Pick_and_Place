@@ -123,9 +123,9 @@ sudo docker run -it --name df_test --runtime=nvidia -v ~/DenseFusion:/home/Dense
 	```
 ## Result
 
-rotation prediction is pretty bad
+* rotation prediction is pretty bad
 ![](https://i.imgur.com/jDXFHrR.png)
-however the xyz seems  usable
+* however the xyz seems  usable
 ![](https://i.imgur.com/VLJQuU0.png)
 
 
