@@ -57,7 +57,7 @@ git clone https://github.com/justagist/panda_simulator -b kinetic-devel
         - problem: apt-get installs a non-working version of libfranka
         - I use [libfranka 0.7.0](https://github.com/frankaemika/libfranka) build from source, make sure the /common folder is not empty before building libfranka
 
-
+---
 ## Demo 1: Simple Pick and Place
 - demo goal: using franka robot arm to grab linemod-dataset-objects with kinect_ros camera attach to the gripper of franka robot arm
 ![](https://i.imgur.com/dWnZgO7.gif)
@@ -83,12 +83,54 @@ git clone https://github.com/justagist/panda_simulator -b kinetic-devel
         ```sh
         python pick_and_place_demo.py
         ```
-    
+---   
 ## Demo 2:Pick and Place using 6D pose estimation
 ![](https://i.imgur.com/O0RjQBr.gif)
+
+#### Step 1: start densefusion inference docker
+1.    Put densefusion package under /home
+1.    build with dockerfile in /home/DenseFusion
+```sh
+sudo docker run -it -v ~/DenseFusion:/home/DenseFusion df_docker
+```
+2.    start the docker
+```sh
+sudo docker run -it --name df_test --runtime=nvidia -v ~/DenseFusion:/home/DenseFusion df_docker
+```
+
+    
+#### Step 2: run densefusion pick and place demo
+
+1. Start demo world
+	```sh
+	roslaunch panda_gazebo IMR_DF_PICK_AND_PLACE.launch
+	```
+2. Start the object-robot interface
+	```sh
+	python object_interface_server.py
+	```
+3. Attach the camera to the robot arm
+	```sh
+	python attach_camera.py
+	```
+4. Start camera viewer
+	```sh
+	python img_saver.py
+	```   
+5. Run pick and place demo
+	```sh
+	python df_pick_and_place_demo.py
+	```
+## Result
+
+rotation prediction is pretty bad
+![](https://i.imgur.com/jDXFHrR.png)
+however the xyz seems  usable
+![](https://i.imgur.com/VLJQuU0.png)
 
 
 ## Code Explain
 
+![](https://i.imgur.com/Bz0AoFG.jpg)
 
 ###### tags: `GAZEBO` `ROS` `IMR` `Documentation`
