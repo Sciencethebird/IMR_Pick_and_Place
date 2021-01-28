@@ -89,7 +89,7 @@ git clone https://github.com/justagist/panda_simulator -b kinetic-devel
 
 #### Step 1: start densefusion inference docker
 1.    Put densefusion package under /home
-[](https://drive.google.com/file/d/1xGCIRPW1JorYgqa4idbuZeD2UcVzXHFb/view?usp=sharing)
+- https://drive.google.com/file/d/1xGCIRPW1JorYgqa4idbuZeD2UcVzXHFb/view?usp=sharing
 1.    build with dockerfile in /home/DenseFusion
 ```sh
 sudo docker run -it -v ~/DenseFusion:/home/DenseFusion df_docker
