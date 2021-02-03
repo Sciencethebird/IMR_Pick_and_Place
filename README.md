@@ -122,14 +122,14 @@ sudo docker run -it --name df_test --runtime=nvidia -v ~/DenseFusion:/home/Dense
 	```sh
 	python df_pick_and_place_demo.py
 	```
-## Result
+## Discussion: DenseFusion Prediction Result
 * Rotation predictions are pretty bad
 ![](https://i.imgur.com/jDXFHrR.png)
 * However the xyz seems  usable
 ![](https://i.imgur.com/VLJQuU0.png)
 
 
-## Code Explain
+## Reference Frame in Gazebo
 
 ![](https://i.imgur.com/Bz0AoFG.jpg)
 
