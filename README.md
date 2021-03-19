@@ -1,4 +1,4 @@
-Panda Robot Arm Pick and Place Demo
+DenseFusion Pick and Place Demo
 ===
 
 ## About
